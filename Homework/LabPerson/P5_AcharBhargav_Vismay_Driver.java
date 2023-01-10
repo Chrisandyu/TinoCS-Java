@@ -10,7 +10,7 @@ public class P5_AcharBhargav_Vismay_Driver {
         P5_AcharBhargav_Vismay_Person joe;
         joe = new P5_AcharBhargav_Vismay_Person();
 
-        P5_AcharBhargav_Vismay_Person bob = new P5_AcharBhargav_Vismay_Person(18, 1.72, false, "Bob");
+        P5_AcharBhargav_Vismay_Person bob = new P5_AcharBhargav_Vismay_Person(14, 1.72, false, "Happy Sparky", 314, "Green", false);
         joe.printInfo();
         joe.increaseAge(5);
         joe.printInfo();

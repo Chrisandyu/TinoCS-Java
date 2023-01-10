@@ -10,19 +10,28 @@ public class P5_AcharBhargav_Vismay_Person{
     double myHeight;    // Height in meters
     boolean isFemale;   // True if female, false if male
     String myName;      // Person's name
+    int myFavoriteNumber;
+    String myFavoriteColor;
+    boolean isSleeping;
 
     public P5_AcharBhargav_Vismay_Person() {        
         myAge = 17;
         myHeight = 1.53;
         isFemale = true;
         myName = "Frances";
+        myFavoriteNumber = 21;
+        myFavoriteColor = "Blue";
+        isSleeping = false;
     }
 
-    public P5_AcharBhargav_Vismay_Person(int age, double height, boolean female, String name) {
+    public P5_AcharBhargav_Vismay_Person(int age, double height, boolean female, String name, int number, String color, boolean sleeping){
         myAge = age;
         myHeight = height;
         isFemale = female;
         myName = name;
+        myFavoriteNumber = number;
+        myFavoriteColor = color;
+        isSleeping = sleeping;
     }
 
     public double heightToInches() {
@@ -44,5 +53,43 @@ public class P5_AcharBhargav_Vismay_Person{
 
     public void increaseAge(int amount) {
         myAge = myAge + amount;
+    }
+    
+    // Returns age in dog years (1 human year = 7 dog years)
+    public int ageInDogYears () {
+        return myAge * 7;
+    }
+
+
+    // Returns this Person's favorite color
+    public String getFavoriteColor () {
+        return myFavoriteColor;
+    }
+
+
+    // Prints this Person's name, age, and favorite color
+    public void printInfo2() {
+        System.out.println(myName + " " + myAge + " " + myFavoriteColor);
+    }
+    
+    
+    // Changes the state of this Person to sleeping
+    public void sleep() {
+        isSleeping = true;
+    }
+
+
+    // Changes the state of this Person to awake
+    public void wakeUp() {
+        isSleeping = false;
+    }
+
+
+    // Prints the sleep state of this Person
+    public void printSleepState() {
+        if (isSleeping == true)
+            System.out.println("I am sleeping....zzzz....");
+        else
+            System.out.println("I am awake!");
     }
 }
