@@ -7,18 +7,18 @@
  */
 public class P5_AcharBhargav_Vismay_Driver {
     public static void main(String[] args) {
-        P5_AcharBhargav_Vismay_Person joe;
-        joe = new P5_AcharBhargav_Vismay_Person();
-
         P5_AcharBhargav_Vismay_Person bob = new P5_AcharBhargav_Vismay_Person(14, 1.72, false, "Happy Sparky", 314, "Green", false);
-        joe.printInfo();
-        joe.increaseAge(5);
-        joe.printInfo();
+        System.out.println("!Hola! Me llamo " + bob.getName());
+        System.out.println("Mi color favorito es " + bob.getFavoriteColor());
+        System.out.println("Yo tengo " + bob.ageInDogYears() + " anos en anos de perro!");
+        System.out.println("... fast forward 15 years ...");
+        bob.increaseAge(15);
+        System.out.println("Ahora, tengo " + bob.ageInDogYears() + " anos en anos de perro!");
+        bob.printSleepState();
+        bob.sleep();
+        bob.printSleepState();
+        
 
-        String answer = bob.getName();
-        System.out.println( "Hi, I'm " + answer );
-        System.out.println( "My height in inches is " + bob.heightToInches());
-        System.out.println("test");
     } 
 }
 

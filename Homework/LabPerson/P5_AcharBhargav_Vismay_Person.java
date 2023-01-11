@@ -69,9 +69,7 @@ public class P5_AcharBhargav_Vismay_Person{
 
     // Prints this Person's name, age, and favorite color
     public void printInfo2() {
-        String response;
-        response = "My name is " + myName;
-        response += " and I'm " + myAge + " years old. My favorite color is " + myFavoriteColor + "!";
+        String response = "My name is " + myName + " and I'm " + myAge + " years old. My favorite color is " + myFavoriteColor;
         System.out.println(response);
     }
     
