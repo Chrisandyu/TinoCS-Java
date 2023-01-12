@@ -52,19 +52,5 @@ public class P5_AcharBhargav_Vismay_HouseDriver{
         } else {
             System.out.println("The asking price is above market value.");
         }
-        
-        
-        
-        
-        
-        
-        
-        
-                                            
-        
-                                                     
-        
-        
-        
     }
 }
