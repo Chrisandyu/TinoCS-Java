@@ -1,4 +1,4 @@
-/*
+ /*
  * Vismay Achar Bhargav
  * Intro Java
  * Lab 2b - HouseWithInput
@@ -18,7 +18,7 @@ public class P5_AcharBhargav_Vismay_House {
         askingPrice = 435000.0;
     }
     
-    public P5_AcharBhargav_Vismay_House(int doors, int windows, int bedrooms, int askPrice){
+    public P5_AcharBhargav_Vismay_House(int doors, int windows, int bedrooms, double askPrice){
         numDoors = doors;
         numWindows = windows;
         numBedrooms = bedrooms;
@@ -41,7 +41,7 @@ public class P5_AcharBhargav_Vismay_House {
         return askingPrice;
     }
     
-    public void setAskingPrice(int price){
+    public void setAskingPrice(double price){
         askingPrice = price;
     }
     
@@ -49,7 +49,7 @@ public class P5_AcharBhargav_Vismay_House {
         Market value is $300,000 plus $55,000 per bedroom
         plus $3,000 per window */
     public double calculateMarketValue() {
-        return 30000 + (55000 * numBedrooms) + (3000 * numWindows);
+        return 300000 + (55000 * numBedrooms) + (3000 * numWindows);
     }
     
     // Adds more windows to the house
@@ -75,8 +75,9 @@ public class P5_AcharBhargav_Vismay_House {
     public boolean isBelowMarketValue() {
         if(askingPrice < calculateMarketValue()){
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
     
     /** returns a String specifying this house's
@@ -84,8 +85,9 @@ public class P5_AcharBhargav_Vismay_House {
         - market value
         - asking price */
     public String toString() {
-        String message = ("A " + numBedrooms + " house  with a market value of " + calculateMarketValue() 
-                            + " is for sale with asking price " + askingPrice);
+        String message = ("A " + numBedrooms + " bedroom house with a market value of $" 
+                            + calculateMarketValue() 
+                            + " is for sale with asking price $" + askingPrice);
         return message;
     }
 }
