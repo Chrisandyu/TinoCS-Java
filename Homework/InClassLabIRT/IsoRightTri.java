@@ -32,17 +32,13 @@ public class IsoRightTri{
     }
     
     public void printTriangle(){
-        int cols = 0;
         int rows = 0;
         int count = legLength;
-        while(rows <= legLength){
-            System.out.print("* ");
-            cols++;
-            if(cols >= count){
-                System.out.println("");
-                rows++;
-                count--;
+        for(int i = 0; i < legLength; i++){
+            for(int j = 0; j <= i; j++){
+                System.out.print("* ");
             }
+            System.out.println("");
         }
     }
 }
