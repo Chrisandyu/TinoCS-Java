@@ -11,7 +11,6 @@ public class P5_AcharBhargav_Vismay_Pen {
         penColor = defaultColor;
         penWidth = DEFAULT_PEN_WIDTH;
         position = new Point(0, 0);
-        
     }
     
     public P5_AcharBhargav_Vismay_Pen(int width){
@@ -26,19 +25,24 @@ public class P5_AcharBhargav_Vismay_Pen {
         position = new Point(0, 0);
     }
     
-    public static void printsDefault(){
-        System.out.println("Default Color: " + defaultColor + ", Default Width: " + DEFAULT_PEN_WIDTH);
-        for(int i = 0; i < 100; i++){
-        
-        }
+    public static void printDefaults(){
+        System.out.println("defaultColor is " + defaultColor + " and DEFAULT_WIDTH is " + DEFAULT_PEN_WIDTH);
     }
     
     public String getPenColor() {
-                                    return penColor;
-                                }
+        return penColor;
+    }
     
     public void setPenColor(String penColor) {
         this.penColor = penColor;
-    }                                                                                                   
+    }
+    
+    public void moveTo(int x, int y){
+        position.setLocation(x, y);
+    }
+    
+    public String toString(){
+        return ("A " + penColor + " Pen of width " + penWidth + " located at (" +  Math.round(position.getX()) + ", " + Math.round(position.getY()) + ")");
+    }
                                                                         
 }
